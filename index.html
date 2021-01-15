@@ -5,14 +5,39 @@
   <meta name="viewport" content="width=device-width">
   <title>JavaScript Random Number</title>
   <script>
+div{
+width:40%;
+height:300px;
+float:left;
+border:1px solid black;
+margin:10px;
+padding:5px;
+}	
 	
-	
+for (var i=1;i<=10;i+=2){
+//document.write(i+"<br>");
+var d1=document.querySelector("#d1");
+d1.innerHTML += "<br>"+i;
+}
+
+for (var i=1;i<=6;i++){
+var n=Math.floor(Math.random()*49)+1;
+if (n<10){
+num=n+" Μονοψήφιος"
+}
+else{
+num=n+" Διψήφιος"
+}
+var d2=document.querySelector("#d2");
+d2.innerHTML += "<br>"+num;
+}
+
 	
   </script>
 </head>
 <body>
-
-
-
+<h2>Εισαγωγή στις επαναλήψεις</h2>
+<div id="d1">Div 1</div>
+<div id="d2">Div 2</div>
 </body>
 </html>

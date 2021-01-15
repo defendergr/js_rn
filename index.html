@@ -18,15 +18,22 @@ div{
 </head>
 <body>
 <h2>Εισαγωγή στις επαναλήψεις</h2>
+<br>
+<label>Δώσε έναν αριθμό</label>
+<input type="number" id="m">
+<button onclick="epanalipsi()">Υποβολή</button>
+<br>
 <div id="d1">Div 1</div>
 <div id="d2">Div 2</div>
 
 <script>	
-	for (var i=1;i<=10;i+=2){
+function epanalipsi(){
+	var m=document.querySelector("#m");
+	for (var i=1;i<=m.value;i+=2){
 	var d1=document.querySelector("#d1");
 	d1.innerHTML += "<br>"+i;
 	}
-
+}
 	for (var i=1;i<=6;i++){
 	var n=Math.floor(Math.random()*49)+1;
 	if (n<10){
